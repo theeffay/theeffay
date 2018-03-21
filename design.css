@@ -1,0 +1,210 @@
+html{
+	height: 100%;
+}
+body{
+		font-family:"Arial";
+		margin:0px;
+		height: 100%;
+}
+a{
+	text-decoration: none;
+}
+a :hover{
+}
+
+img{
+	border-radius: 5px;
+	max-width: 100%;
+}
+
+.address{
+	color:crimson;
+	text-align: center;
+	font-size: 24px;
+}
+.article2{
+	padding: 10px;
+}
+.contact{
+	text-align: center;
+	color:crimson;
+	margin-top:40px;
+	padding-top: 60px;
+	font-size: 1.9em;
+
+}
+.container{
+	margin: 0px;
+	background-color: snow;
+	border-left:solid 10px crimson;
+	border-right:solid 10px crimson;
+	min-height: 100%;
+}
+.gallery{
+	width: 100%;
+}
+.fb{
+	width: 20%;
+	margin: 0 15% 0 14%;
+}
+.index_container{
+	width:100%;
+	margin: 0px;
+	position: relative;
+	min-height: 100%;
+}
+.index_logo_container{
+}
+.index_logo{
+	width: 100%;
+}
+
+
+
+.index_body{
+	margin:auto auto;
+	width: 100%;
+	height: 100%;
+
+}
+.index_zone{
+	position: absolute;
+}
+
+.index_menu{
+	width:30%;
+	font-size:4vw;
+	position: absolute;
+	text-align: center;
+	display: none;
+	color:crimson;
+	border:solid 1px crimson;
+}
+
+.onfashion_mom{
+	padding:10px 20px 10px 10px;
+}
+.onfashion{
+	max-width:100%;
+}
+
+.up_left{
+}
+.up_right{
+}
+.down_left{
+}
+.down_right{
+}
+.hover{
+	position: absolute;
+}
+.hover_up_left:hover + .index_menu{
+  display: block;
+}
+.hover_up_right:hover + .up_right{
+  display: block;
+}
+.hover_down_left:hover + .down_left{
+  display: block;
+}
+.hover_down_right:hover + .down_right{
+  display: block;
+}
+.instagram{
+	width: 20%;
+	margin: 0 14% 0 15%;
+}
+@media screen and (min-width: 1024px){
+.left_column{
+	width:25%;
+	float: left;
+}
+.right_column{
+	width:75%;
+	float: left;
+}
+}
+@media screen and (min-width: 736px) and (max-width: 1023px){
+.left_column{
+	width:35%;
+	float: left;
+}
+.right_column{
+	width:65%;
+	float: left;
+}
+}
+
+@media screen and (max-width: 735px){
+	.right_column{
+	width:90%;
+	padding: 0 5%;
+}	
+}
+.left_menu{
+	color:crimson;
+	margin:20px 20px;
+	border-bottom:dotted 1px crimson;
+	font-size: 1.9em;
+
+}
+
+.logo{
+	width:50%;
+	margin: 20px 25% 20px 25%;
+}
+
+.lupe{
+	margin-left: 15px;
+	float:left;
+}
+
+.photo_container{
+	float:left;
+	max-width:350px;
+	padding: 10px 15px;
+}
+.photo_container_mom{
+	padding: 5px;
+}
+
+.red_line{
+	width:60%;
+	height:20px;
+	border-top:solid 1px crimson;
+}
+.search_mother{
+	border:hidden;
+	float:left;
+}
+
+.SNS{
+	text-align: center;
+	color:crimson;
+	margin-top:80px;
+	padding-top: 20px;
+	font-size: 1.9em;
+
+}
+.sns_container{
+	float:left;
+
+}
+
+.title{
+	border-bottom:solid 1px crimson;
+	padding-bottom: 15px;
+	font-size: 1.9em;
+}
+
+input.search{
+	font-size:27px;
+	padding:9px;
+	border:hidden;
+	background-color: snow;
+	border-bottom: solid 3px crimson;
+	width:65%;
+	margin: 0px 5px;
+	float:left;
+}
