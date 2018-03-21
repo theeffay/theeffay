@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>theffay</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="design.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	
+</head>
+
+<body>
+	<div class="index_container">
+		<!-- <div class="index_logo_container"> -->
+			<!-- <div class="index_body"> -->
+			<div class="index_zone">
+				<img class="index_logo" src="image/logo.png">
+				<!-- <br style="clear:both"> -->
+			</div>
+			<!-- </div> -->
+			<!-- <br style="clear:both">	 -->
+		<!-- </div> -->
+		<div class="index_menu up_left">ABOUT</div>
+		<div class="index_menu up_right">ON TRENDS</div>
+		<div class="index_menu down_left">PHOTO ARCHIVE</div>
+		<div class="index_menu down_right">ON FASHION</div>
+
+		<div class="hover hover_up_left" name="about.html"></div>
+		<div class="hover hover_up_right" name="trends.html"></div>
+		<div class="hover hover_down_left" name="photo_gallery.html"></div>
+		<div class="hover hover_down_right" name="fashion.html"></div>
+		 <!-- <br style="clear:both">-->
+	</div>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function (){
+			$('.hover_up_left').hover(function(){
+				$('.up_left').show();
+				},function(){
+				$('.up_left').hide();
+			});
+			$('.hover_down_left').hover(function(){
+				$('.down_left').show();
+				},function(){
+				$('.down_left').hide();
+			});
+			$('.hover_up_right').hover(function(){
+				$('.up_right').show();
+				},function(){
+				$('.up_right').hide();
+			});
+			$('.hover_down_right').hover(function(){
+				$('.down_right').show();
+				},function(){
+				$('.down_right').hide();
+			});
+
+		});
+
+		$('.hover').on('click',function(){
+			console.log('clicked');
+			href=$(this).attr('name');
+			$('.index_menu').hide();
+			$('.index_zone').animate({
+				width:"15%",
+				left:"90px",
+				top:"20px"
+			},2000,'swing',function(){transfer(href);});
+		});
+
+		function transfer(href){
+			window.location.href=href;
+		}
+		$(window).on('load resize', function(){
+			var width=$(window).width();
+			var height=$(window).height();
+			var logo_diameter=width*0.4;
+			var logo_radius=width*0.15;
+			var logo_left=width*0.3;
+			var menu_left=width*0.1;
+			var logo_top=(height-logo_diameter)*0.5;
+			$('.index_zone').css({'left':logo_left,'top':logo_top, 'height':logo_diameter,'width':logo_diameter});
+			$('.hover').css({'width':logo_radius,'height':logo_radius});
+			$('.hover_up_left').css({'left':logo_left,'top':logo_top});
+			$('.hover_up_right').css({'right':logo_left,'top':logo_top});
+			$('.hover_down_left').css({'left':logo_left,'bottom':logo_top});
+			$('.hover_down_right').css({'right':logo_left,'bottom':logo_top});
+			$('.up_left').css({'left':menu_left,'top':logo_top});
+			$('.up_right').css({'right':menu_left,'top':logo_top});
+			$('.down_left').css({'left':menu_left,'bottom':logo_top});
+			$('.down_right').css({'right':menu_left,'bottom':logo_top});
+
+
+		});
+
+	</script>
+</body>
+</html>
